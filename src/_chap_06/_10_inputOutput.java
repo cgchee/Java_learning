@@ -21,6 +21,6 @@ public class _10_inputOutput {
         System.out.println("Your name is " + name);
         System.out.println("Your address is " + address);
         System.out.println("Your ID number is " + id);
-        sc.close();
+        sc.close();// 없어도 된다
     }
 }
