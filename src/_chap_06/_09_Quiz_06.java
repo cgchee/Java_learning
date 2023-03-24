@@ -4,20 +4,8 @@ public class _09_Quiz_06 {
 
     public static String getHiddenData(String customer, int position) {
         String returnString = "*************************";
-        switch (position) {
-            case 1:
-                int nameLen = customer.length();
-                returnString = customer.substring(0,0) + returnString.substring(1,nameLen);
-                break;
-            case 8:
-                returnString = customer.substring(0,8) + "******";
-                break;
-            case 9:
-                returnString = customer.substring(0,0) + "-****";
-                break;
-            default:
-                System.out.println("잘못 입력");
-        }
+        int nameLen = customer.length();
+        returnString = customer.substring(0,position) + returnString.substring(position,nameLen);
         return returnString;
     }
 
