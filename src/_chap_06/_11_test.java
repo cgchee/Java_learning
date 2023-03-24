@@ -7,7 +7,7 @@ public class _11_test {
         Scanner sc = new Scanner(System.in);
 
 
-        int maxNum = 3;
+        int maxNum = 10;
         String[] topping = new String[maxNum];
         int numTopping = 0;
         for (int i = 0; i < maxNum; i++) {
@@ -24,12 +24,16 @@ public class _11_test {
             }
             numTopping++;
         }
-        //String[] finalTopping = topping[0];
 
-//        Arrays.sort(finalTopping);
-//        for (int j = 0; j < numTopping; j++) {
-//            System.out.print((j + 1) + ". ");
-//            System.out.println(finalTopping[j]);
-//        }
+        String[] finalTopping = new String[numTopping];
+        for (int i = 0; i < numTopping; i++) {
+            finalTopping[i] = topping[i];
+        }
+
+        Arrays.sort(finalTopping);
+        for (int j = 0; j < numTopping; j++) {
+            System.out.print((j + 1) + ". ");
+            System.out.println(finalTopping[j]);
+        }
     }
 }
