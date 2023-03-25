@@ -25,12 +25,9 @@ public class _11_test {
             numTopping++;
         }
 
-        String[] finalTopping = new String[numTopping];
-        for (int i = 0; i < numTopping; i++) {
-            finalTopping[i] = topping[i];
-        }
-
+        String[] finalTopping = Arrays.copyOfRange(topping, 0, 3);
         Arrays.sort(finalTopping);
+        System.out.println(finalTopping.length);
         for (int j = 0; j < numTopping; j++) {
             System.out.print((j + 1) + ". ");
             System.out.println(finalTopping[j]);
