@@ -5,7 +5,27 @@ public class BlackBox {
     String resolution;
     int price;
     String color;
+    int serialNumber;
+
+    static int counter = 0; // for generating serial number
     static boolean canAutoReport = false;  // if 'static' is delcared, then it is a class variable
+
+
+    BlackBox() {
+        System.out.println("Call of the basic construction");
+        this.serialNumber = ++counter;
+        System.out.println("A new serial number is issued: " + this.serialNumber);
+    }
+
+    BlackBox(String modelName, String resolution, int price, String color){
+        this();
+        System.out.println("call of user-defined construction");
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+        this.color = color;
+    }
+
 
     void autoReport(){
         if (canAutoReport) {
@@ -42,5 +62,16 @@ public class BlackBox {
 
     void record(){
         record(true,true,5);
-    }
+     }
+
+     static void callServiceCenter(){
+         System.out.println("Connecting Service Center(1588-0000)");
+         // modelName = "test"; impossible because modelName is instance variable
+         // canAutoReport = false; // possible
+     }
+
+     void appendModelName(String modelName){
+        this.modelName += modelName;
+     }
+
 }

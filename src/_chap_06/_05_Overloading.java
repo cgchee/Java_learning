@@ -10,8 +10,8 @@ public class _05_Overloading {
 
     public static int getPower(String strNumber) {
         int number = Integer.parseInt(strNumber);
-        return number*number;
-        // return number*number;
+        //return number*number;
+        return getPower(number);
     }
 
     public static int getPower(int number, int exponent) {
