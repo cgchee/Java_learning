@@ -10,7 +10,7 @@ public class BlackBox {
     static int counter = 0; // for generating serial number
     static boolean canAutoReport = false;  // if 'static' is delcared, then it is a class variable
 
-
+    // Define a constructor. (A constructor is a kind of automatically called method when a instance is made)
     BlackBox() {
         System.out.println("Call of the basic construction");
         this.serialNumber = ++counter;
