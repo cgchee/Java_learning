@@ -10,6 +10,8 @@ public class _08_Constructor {
         System.out.println(b1.modelName);
         System.out.println(b1.serialNumber);
         System.out.println();
+//         Instance b1 is created and its properties are defined manually.
+//         But if we use a constructor, when an instanc
 
         BlackBox b2 = new BlackBox("White one", "UHD", 30000, "White");
         System.out.println(b2.modelName);
