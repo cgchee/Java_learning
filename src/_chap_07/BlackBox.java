@@ -81,12 +81,12 @@ public class BlackBox {
 
     // A constructor can be overloaded.
     BlackBox(String modelName, String resolution, int price, String color){
-//        this();
-//        System.out.println("call of user-defined construction");
-//        this.modelName = modelName;
-//        this.resolution = resolution;
-//        this.price = price;
-//        this.color = color;
+        this();
+        System.out.println("call of user-defined construction");
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+        this.color = color;
     }
 
     // Getter & Setter
