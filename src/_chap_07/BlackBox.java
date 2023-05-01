@@ -101,9 +101,8 @@ public class BlackBox {
     String getResolution(){
         if(resolution == null || resolution.isEmpty()){
             return "Please contact the seller";
-        } else {
-            return resolution;
         }
+        return resolution;
     }
 
     void setResolution(String resolution){

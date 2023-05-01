@@ -2,10 +2,10 @@ package _chap_07;
 
 public class BlackBoxRefurbish {
 
-    String modelName;  // instance variable
+    public String modelName;  // instance variable
     String resolution;
-    int price;
-    String color;
+    private int price;
+    protected String color;
 
     public String getModelName() {
         return modelName;
@@ -16,6 +16,9 @@ public class BlackBoxRefurbish {
     }
 
     public String getResolution() {
+        if(resolution == null || resolution.isEmpty()){
+            return "Please contact the seller";
+        }
         return resolution;
     }
 
@@ -26,9 +29,15 @@ public class BlackBoxRefurbish {
     public int getPrice() {
         return price;
     }
+    // private int getPrice() { return price; }
+    // In this case, another class cannot call this method.
 
     public void setPrice(int price) {
-        this.price = price;
+        if(price < 100000){
+            this.price = 100000;
+        } else {
+            this.price = price;
+        }
     }
 
     public String getColor() {
@@ -39,3 +48,6 @@ public class BlackBoxRefurbish {
         this.color = color;
     }
 }
+
+// Also in this file, we can make other classes. But there should be only one public class
+// because the name of the class should be the same the file name.
